@@ -157,7 +157,12 @@ char** leggi_lista(FILE* file_in, int* nof_elements) {
 }
 
 
-//
+/**
+ * @brief funzione che stampa tutti i nomi contenuti in mio_ar.
+ * 
+ * @param mio_ar 
+ * @param n_elems 
+ */
 void stampa_lista(char** mio_ar, int n_elems) {
     if(!mio_ar) return;
     for(int i=0;i<n_elems;i++){
