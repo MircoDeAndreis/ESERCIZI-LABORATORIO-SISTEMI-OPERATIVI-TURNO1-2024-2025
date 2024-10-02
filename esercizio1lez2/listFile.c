@@ -13,6 +13,7 @@ void test_leggi_lista(){
     fp=fopen("lista_nomi.txt","r");
     int size=0;
     char** listToControl=leggi_lista(fp,&size);
+    stampa_lista(listToControl,size);
     if(size!=3){
         printf("dimensione sbagliata\n");
     } 
@@ -35,6 +36,7 @@ void test_leggi_lista(){
     fp=fopen("lista_nomi_vuota.txt","r");
     size = 0;
     listToControl = leggi_lista(fp, &size);
+    stampa_lista(listToControl,size);
     if (size != 0) {
         printf("dimensione sbagliata per file vuoto\n");
     } else {
@@ -48,6 +50,7 @@ void test_leggi_lista(){
     fp=fopen("lista_nomi_uno.txt","r");
     size = 0;
     listToControl = leggi_lista(fp, &size);
+    stampa_lista(listToControl,size);
     if (size != 1) {
         printf("dimensione sbagliata per un solo nome\n");
     } else if (strcmp(listToControl[0], "giovanni") != 0) {
@@ -65,6 +68,7 @@ void test_leggi_lista(){
     fp=fopen("lista_nomi_spazi.txt","r");
     size = 0;
     listToControl = leggi_lista(fp, &size);
+    stampa_lista(listToControl,size);
     if (size != 2) {
         printf("dimensione sbagliata per nomi con spazi\n");
     } else if (strcmp(listToControl[0], "anna maria") != 0) {
@@ -85,6 +89,7 @@ void test_leggi_lista(){
     fp=fopen("lista_nomi_duplicati.txt","r");
     size = 0;
     listToControl = leggi_lista(fp, &size);
+    stampa_lista(listToControl,size);
     if (size != 2) {
         printf("dimensione sbagliata per nomi duplicati\n");
     } else if (strcmp(listToControl[0], "paolo") != 0) {
@@ -105,6 +110,7 @@ void test_leggi_lista(){
     fp=fopen("lista_nomi_speciali.txt","r");
     size = 0;
     listToControl = leggi_lista(fp, &size);
+    stampa_lista(listToControl,size);
     if (size != 2) {
         printf("dimensione sbagliata per nomi con caratteri speciali\n");
     } else if (strcmp(listToControl[0], "aless@ndro") != 0) {
@@ -153,4 +159,8 @@ char** leggi_lista(FILE* file_in, int* nof_elements) {
 
 //
 void stampa_lista(char** mio_ar, int n_elems) {
+    if(!mio_ar) return;
+    for(int i=0;i<n_elems;i++){
+        printf("%s\n",mio_ar[i]);
+    }
 }
