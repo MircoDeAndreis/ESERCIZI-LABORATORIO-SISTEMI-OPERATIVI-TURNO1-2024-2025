@@ -1,0 +1,2 @@
+generato da copilot => env | grep -o -E '^(LOGNAME|HOME|PATH)='
+generato da me con l'aiuto di copilot => env | grep -e '^LOGNAME=' -e '^HOME=' -e '^PATH='

@@ -8,7 +8,11 @@ void swap(char* first,char* second){
     *first=*second;
     *second=temp;
 }
-
+/**
+ * @brief Receives a string as input, reverses the string, and converts it to uppercase.
+ * 
+ * @param newString 
+ */
 void reverse_to_upper(char* newString){
     int j=strlen(newString)-1;
     for(int i=0;i<strlen(newString)/2+1;i++){
