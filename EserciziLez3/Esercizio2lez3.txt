@@ -1,0 +1,29 @@
+Che cosa restituisce la system call wait?
+
+-ritorna il pid del figlio se il figlio termina o viene interotto, altrimenti restituisce -1 e modifca errno per specificare l'errore.
+
+A cosa serve l’argomento della wait?
+
+-Serve a contenere le informazioni di terminazione del processo figlio.
+
+In che senso padre e figlio "condividono" le variabili?
+
+-Il figlio ha una copia esatta delle variabili, ma non le condividono infatti si trovano in due aree di memoria completamente differente. 
+
+Dichiarare una variabile intera myvar e, prima della fork(), assegnarle un valore
+X. Modificare il valore di myvar nel corpo del figlio. Stampare myvar nel codice
+del padre prima e dopo la wait(). Che valori di X possiamo aspettarci? Perché?
+
+-Il padre stamperà il valore: "X"  perchè la variabile myvar non verra modificata dalla procedura padre.
+Mentre il figlio stamperà la variabile con il valore modificato (esempio la procedura figlio modfica la variabile myvar moltiplicando per due il valore X e sommando 3) stamperà:"2X+3".
+Verranno stampati due valori differenti perchè le modifiche alla variabile myvar, avranno effetto solo nella variabile myvar del figlio e non quella del padre.
+
+Cosa succede se il processo padre non attende la terminazione del figlio con
+una wait()?
+
+-Dipende dal codice, se il padre non ha bisogno di aspettare la terminazione del figlio per finire il suo scopo, 
+non ci saranno errori.
+Mentre se il padre ha bisogno di aspettare la terminazione del figlio per continuare il suo codice, 
+è probabile che ci siano degli errori di sincronizzazione ma non è certo, 
+questo dipenderà da come il sistema operativo deciderà di gestire i processi.
+

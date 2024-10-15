@@ -49,7 +49,7 @@ void test_manage_file(){
     fclose(fp);
 }
 /**
- * @brief receives in input an array of string and it put it in a file, after he print all the name the are write in the file. 
+ * @brief Receives an array of strings as input, writes them to a file, and then prints all the names that were written to the file.
  * 
  * @param fp 
  * @param nomi 

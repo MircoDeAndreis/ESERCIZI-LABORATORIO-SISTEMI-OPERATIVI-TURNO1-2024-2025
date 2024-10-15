@@ -1,0 +1,29 @@
+Quanti processi generiamo usando questo codice?
+    for (i=0; i<3; i++)
+        fork();
+-genererà 7 processi + il padre=8 processi
+E questo codice quanti processi genera?
+    for (i=0; i<3; i++) {
+        n = fork();
+        if (n == 0) printf("sono un figlio");
+        else printf("sono un padre");
+    }
+-completamente analogo genererà 7 processi + il padre= 8 processi 
+E invece quanti processi genera questo codice?
+    for (i=0; i<3; i++) {
+        n = fork();
+        if (n == 0) {
+            printf("sono un figlio");
+            exit(0);
+        } else
+            printf("sono un padre");
+    }
+-genererà 3 figli + il padre = 4 processi
+
+Allego pdf comportamento dei tre programmi.
+
+Vedete differenze tra i tre programmi? Quale programma si comporta
+"correttamente"?
+
+-Si i primi due programmi generano 7 processi nuovi mentre il terzo programma genera solo 3 processi nuovi.
+-Se per correttamente intendiamo che vogliamo richiamare solamente 3 processi nuovi allora solamente il terzo programma è corretto. 

@@ -12,7 +12,7 @@ void decoder(char* string){
     int size=strlen(string);
     for(int i=0;i<size;i++){
         string[i]-=2;
-        if(string[i]!=' '+2 && string[i]!='\n'+2 && string[i]!='\t'+2 && (string[i]<'a' || (string[i]<'A' && string[i]>'z'))) string[i]+='z'-'a'+1; 
+        //if(string[i]!=' '+2 && string[i]!='\n'+2 && string[i]!='\t'+2 && (string[i]<'a' || (string[i]<'A' && string[i]>'z'))) string[i]+='z'-'a'+1; 
     }
 }
 
