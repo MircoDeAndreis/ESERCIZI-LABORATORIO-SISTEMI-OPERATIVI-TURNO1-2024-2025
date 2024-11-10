@@ -8,7 +8,7 @@
 
 static void handler(int sig){
     siginfo_t info;
-    if (waitid(P_ALL, -1, &info, WEXITED) == -1) {
+    if (waitid(P_ALL, -1, &info, WEXITED | WSTOPPED | WCONTINUED) == -1) {
         perror("waitid");
         exit(EXIT_FAILURE);
     }
@@ -47,8 +47,8 @@ int main(){
         sigset_t my_mask;
         sigemptyset(&my_mask);
         sa.sa_mask=my_mask;
-        sa.sa_flags=SA_NODEFER;
-        sigaction(SIGCHLD,&sa,NULL);
+        //sa.sa_flags=SA_NODEFER;
+        if(sigaction(SIGCHLD,&sa,NULL)==-1) printf("errore nel sigaction\n");
         wait(NULL);
     }else{
         write(STDOUT_FILENO, "ciao\n", 5);

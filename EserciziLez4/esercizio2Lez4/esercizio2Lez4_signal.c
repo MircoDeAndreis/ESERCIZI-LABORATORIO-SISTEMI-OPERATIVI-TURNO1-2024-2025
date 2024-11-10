@@ -7,8 +7,9 @@
 #include<sys/wait.h>
 
 static void handler(int sig){
+    
     siginfo_t info;
-    if (waitid(P_ALL, -1, &info, WEXITED) == -1) {
+    if (waitid(P_ALL, -1, &info, WEXITED | WSTOPPED | WCONTINUED) == -1) {
         perror("waitid");
         exit(EXIT_FAILURE);
     }

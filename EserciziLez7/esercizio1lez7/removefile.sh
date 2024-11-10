@@ -1,0 +1,1 @@
+rm sem_00 sem_01 sem_02 sem_03

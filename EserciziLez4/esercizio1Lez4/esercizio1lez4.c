@@ -1,5 +1,5 @@
-#include<stdio.h>
-#include<signal.h>
+#include <stdio.h>
+#include <signal.h>
 #include <unistd.h>
 #include <stdlib.h>
 #include <stdbool.h>
@@ -16,6 +16,7 @@ int main(){
             sleep(10);
         }
     }else{
+        sleep(5);
         kill(id,SIGTERM);
         int status;
         waitpid(id, &status, 0);

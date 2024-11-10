@@ -1,0 +1,2 @@
+rm macos
+rm linux

@@ -20,3 +20,13 @@ core
 *.swp
 *.o
 test*
+*/.DS_Store
+*/.vscode
+*/.idea
+*/.git
+*/.gitignore
+*/.gitattributes
+*/.gitmodules
+*/.gitkeep
+*/.gitconfig
+*/.gitmessage
