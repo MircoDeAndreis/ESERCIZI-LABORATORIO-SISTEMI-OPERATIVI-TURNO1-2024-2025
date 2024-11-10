@@ -7,7 +7,7 @@ Questa repository contiene tutti gli esercizi di Sistemi Operativi.
 1. Clona la repository:
 
     ```bash
-    git clone https://github.com/<tuo-username>/PROGETTI-SISTEMI-OPERATIVI.git
+    git clone https://github.com/MircoDeAndreis/ESERCIZI-LABORATORIO-SISTEMI-OPERATIVI-TURNO1-2024-2025.git
     ```
 
 2. Entra nella cartella del progetto:
