@@ -13,7 +13,7 @@ Questa repository contiene tutti gli esercizi di Sistemi Operativi.
 2. Entra nella cartella del progetto:
 
     ```bash
-    cd PROGETTI-SISTEMI-OPERATIVI
+    cd ESERCIZI-LABORATORIO-SISTEMI-OPERATIVI-TURNO1-2024-2025
     ```
 
 3. Segui le istruzioni presenti nei singoli esercizi.
