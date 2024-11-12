@@ -12,10 +12,10 @@ int main(){
     if((semid=semget(keysem,1,IPC_CREAT|IPC_EXCL|0666))==-1){
         dd_error("semaforo non creato correttamente");
     }
-    //pause();
+    //pause(); //nel caso si voglia simulare un context switch per far vedere il problema di sincronizzazione
     union semun arg;
     arg.val=0;
-    if(semctl(semid,0,SETVAL,arg.val)==-1){ //viene iniziallizato a arg.val il semaforo 0 del set id
+    if(semctl(semid,0,SETVAL,arg)==-1){ //viene iniziallizato a arg.val il semaforo 0 del set semid
         dd_error("semaforo non inizializzato");
     }
     struct sembuf sop;
