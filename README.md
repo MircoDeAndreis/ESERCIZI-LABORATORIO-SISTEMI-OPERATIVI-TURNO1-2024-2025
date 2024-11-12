@@ -2,6 +2,8 @@
 
 Questa repository contiene tutti gli esercizi di Sistemi Operativi.
 
+Siete liberi di collaborare. Per qualsiasi chiarimento, potete contattarmi alla mia email istituzionale: [mirco.deandreis@edu.unito.it](mailto:mirco.deandreis@edu.unito.it)
+
 ## Come usare la repository
 
 1. Clona la repository:
